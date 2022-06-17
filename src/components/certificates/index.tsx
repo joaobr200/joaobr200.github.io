@@ -1,50 +1,62 @@
 import React from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import certificates from "./certificates";
-import SampleCertificate from "../../assets/sample-certificate.svg";
 import { FaMedal } from "react-icons/fa";
 import {
   Container,
+  CertificateContent,
   CertificateWrapper,
   CertificateIcon,
-  Image,
 } from "./styles";
 
 const Certificates: React.FC = () => {
   const router = useRouter();
   function handleClickNavigateToCertificate(url: string) {
-    router.push(url);
+    router.push(url, "certificado", { shallow: true });
   }
+
   return (
-    <Container>
-      <div className="container">
-        <h1>Certificados</h1>
+    <Container className="container">
+      <div>
+        <h1 className="title">Certificados</h1>
       </div>
-      <div className="container">
+      <CertificateContent>
         {certificates.map(({ name, school, imageUri, url }) => (
-          <div key={name}>
-            <CertificateWrapper
-              onClick={() => handleClickNavigateToCertificate(url)}
-            >
-              <header>
-                {imageUri ? (
-                  <Image src={imageUri} alt="certificate" />
-                ) : (
-                  <SampleCertificate />
-                )}
-              </header>
-              <div className="body">
-                <p className="school">{school}</p>
-                <p>{name}</p>
-              </div>
-              <CertificateIcon>
-                <FaMedal fontSize={32} />
-              </CertificateIcon>
-            </CertificateWrapper>
-          </div>
+          <CertificateWrapper
+            key={name}
+            onClick={() => handleClickNavigateToCertificate(url)}
+          >
+            <header>
+              {imageUri ? (
+                <Image
+                  src={imageUri}
+                  alt="certificate"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover" }}
+                />
+              ) : (
+                <Image
+                  src={"/assets/sample-certificate.svg"}
+                  alt="certificate"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+            </header>
+            <div className="body">
+              <p className="school">{school}</p>
+              <p>{name}</p>
+            </div>
+            <CertificateIcon>
+              <FaMedal fontSize={32} />
+            </CertificateIcon>
+          </CertificateWrapper>
         ))}
-      </div>
+      </CertificateContent>
     </Container>
   );
 };

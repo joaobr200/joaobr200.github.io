@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const Welcome = styled.section`
@@ -39,11 +40,6 @@ export const Welcome = styled.section`
     line-height: 1.4rem;
   }
 
-  > svg {
-    width: 100%;
-    max-width: 400px;
-  }
-
   @media screen and (max-width: 784px) {
     h1 {
       font-size: 3.6rem;
@@ -59,6 +55,13 @@ export const Welcome = styled.section`
 
       text-align: center;
     }
+  }
+`;
+
+export const WelcomeImg = styled(Image)`
+  display: none;
+  @media screen and (max-width: 784px) {
+    display: none;
   }
 `;
 
@@ -98,4 +101,3 @@ export const Stack = styled.section`
     }
   }
 `;
-

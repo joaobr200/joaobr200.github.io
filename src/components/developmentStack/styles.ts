@@ -31,7 +31,7 @@ export const Container = styled.div`
     letter-spacing: 0.2rem;
   }
 
-  article img.react{
+  article img.react {
     animation: rotate 25s linear infinite;
 
     @keyframes rotate {

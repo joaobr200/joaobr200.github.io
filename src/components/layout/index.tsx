@@ -5,7 +5,13 @@ import Nav from "../nav";
 import Footer from "../footer";
 import { Container } from "./styles";
 
-const Layout = ({ children, title, description }: LayoutProps) => {
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
   return (
     <Container>
       <Head>
@@ -19,12 +25,4 @@ const Layout = ({ children, title, description }: LayoutProps) => {
   );
 };
 
-type WithChildren = {
-  children?: React.ReactNode;
-};
-
-interface LayoutProps extends WithChildren {
-  title?: string;
-  description?: string;
-}
 export default Layout;

@@ -17,9 +17,7 @@ const Footer: React.FC = () => {
       </Wrapper>
       <hr />
       <div className="container">
-        <p>
-          &copy; 2020 joaobr200.life <br /> Alguns direitos reservados.
-        </p>
+        <p>&copy; 2020 joaobr200.github.io</p>
       </div>
     </Rodape>
   );

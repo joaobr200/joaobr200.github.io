@@ -2,8 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 import Network from "../../components/network";
-import LogoSVG from "../../assets/logo.svg";
+
 import { Header, NavBar, Logo } from "./styles";
+import Image from "next/image";
 
 const Nav: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Nav: React.FC = () => {
           <Logo>
             <Link href="/">
               <a>
-                <LogoSVG />
+                <Image src="/assets/logo.svg" width={300} height={300} />
               </a>
             </Link>
           </Logo>

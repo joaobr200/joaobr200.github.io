@@ -70,7 +70,13 @@ export const NetworkWrapper = styled.div`
   display: none;
 
   @media screen and (min-width: 1024px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    div {
+      cursor: pointer;
+    }
   }
 `;
 

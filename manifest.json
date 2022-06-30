@@ -1,14 +1,11 @@
 {
   "index.html": {
-    "file": "assets/index.fe99daf1.js",
+    "file": "assets/index.efad59f1.js",
     "src": "index.html",
     "isEntry": true,
     "assets": [
-      "assets/logo.f97acae0.svg",
       "assets/portfolio.523b42b2.svg",
       "assets/me.3771edd0.png",
-      "assets/html.36193951.svg",
-      "assets/css.106e7ff7.svg",
       "assets/react.e9699ef9.svg",
       "assets/typescript.a37cdf16.svg",
       "assets/nodejs.017082bf.svg"

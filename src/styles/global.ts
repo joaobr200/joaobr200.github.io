@@ -63,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
       width: 36px;
       height: 4px;
       display: block;
-      background: ${({ theme }) => theme.colors.gray};
+      background: ${({ theme }) => theme.colors.gray[300]};
   }
 
 

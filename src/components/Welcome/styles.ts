@@ -15,9 +15,10 @@ export const WelcomeWrapper = styled.div`
     margin-right: 24px;
   }
 
-  h1 {
+  div h1 {
     color: ${({ theme }) => theme.color};
-    font-size: 4.6rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   h1::after {
@@ -52,7 +53,7 @@ export const WelcomeWrapper = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    h1 {
+    div h1 {
       font-size: 3.4rem;
     }
   }
@@ -66,7 +67,7 @@ export const WelcomeWrapper = styled.div`
       text-align: center;
       margin: 0 auto;
     }
-    h1 {
+    div h1 {
       font-size: 2.8rem;
       line-height: 1.6rem;
     }

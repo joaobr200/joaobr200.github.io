@@ -2,6 +2,7 @@ import React from "react";
 
 import { AboutSection, Container, AboutWrapper } from "./styles";
 import me from "../../assets/me.png";
+import { FaArrowAltCircleLeft, FaArrowRight } from "react-icons/fa";
 
 const About: React.FC = () => {
   return (
@@ -25,6 +26,14 @@ const About: React.FC = () => {
               aprendizado, conclui cursos especializados na área da programação
               tendo conhecimento prático de HTML, CSS, Javascript e React
             </p>
+            <a
+              href="https://www.linkedin.com/in/joaobr200/details/certifications/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Confira alguns dos meus certificados
+              <FaArrowRight />
+            </a>
           </article>
         </AboutWrapper>
       </Container>

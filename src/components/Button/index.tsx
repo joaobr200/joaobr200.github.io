@@ -3,7 +3,7 @@ import React, { ButtonHTMLAttributes } from "react";
 import { FullButton, LargeButton, MediumButton, SmallButton } from "./styles";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   size: string;
 }
 
@@ -23,6 +23,8 @@ const Button: React.FC<IButtonProps> = ({ children, size, ...props }) => {
   if (!size) {
     return <FullButton {...props}>{children}</FullButton>;
   }
+
+  return <></>;
 };
 
 export default Button;

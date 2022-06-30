@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 
-export const Header = styled.header`
+interface MenuProps {
+  isOpen: boolean;
+}
+
+export const Nav = styled.header`
+  position: relative;
   width: 100%;
   height: 100px;
   padding: 8px;
@@ -16,7 +22,11 @@ export const NavBar = styled.nav`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: space-between;
+  }
 `;
 
 export const Logo = styled.div`
@@ -27,22 +37,48 @@ export const Logo = styled.div`
     font-weight: 500;
   }
 
-  a svg {
+  a img {
     width: calc(100% - 40px);
   }
 
-  a svg.white {
+  a img.white {
     filter: brightness(0) invert(1);
   }
 
   cursor: pointer;
 `;
 
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+export const MenuList = styled.ul`
+  display: none;
+  gap: 16px;
+
+  li a {
+    color: ${({ theme }) => theme.colors.gray[400]};
+    transition: color 200ms ease;
+  }
+
+  li a:hover {
+    color: ${({ theme }) => theme.colors.gray[200]};
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+`;
+
+export const NetworkWrapper = styled.div`
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+`;
+
+export const MenuButton = styled.div`
+  cursor: pointer;
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const StyledSwitch = styled(SwitchPrimitive.Root)`

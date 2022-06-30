@@ -41,12 +41,19 @@ export const AboutWrapper = styled.div`
     gap: 10px;
 
     h2 {
-      color: ${({ theme }) => theme.colors.gray};
+      color: ${({ theme }) => theme.colors.gray[300]};
     }
 
     p {
       margin: 8px;
-      color: ${({ theme }) => theme.colors.gray};
+      color: ${({ theme }) => theme.colors.gray[300]};
+    }
+
+    a {
+      color: ${({ theme }) => theme.colors.gray[300]};
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
   }
 `;

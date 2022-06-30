@@ -6,7 +6,7 @@ import { dark, light } from "./styles/themes/index";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={dark}>
       <Home />
       <GlobalStyle />
     </ThemeProvider>

@@ -1,34 +1,32 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
+export const Rodape = styled.footer`
   width: 100%;
-  padding: 8px;
+  padding: 32px;
 
-  background: ${({ theme }) => theme.background};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  background: ${({ theme }) => theme.colors.secundary};
   box-shadow: ${({ theme }) => theme.shadows.xl};
   transition: background 0.2s linear;
-`;
 
-export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const MadeWithLove = styled.div`
-  width: 100%;
-  opacity: 0.6;
-  font-size: 1rem;
-
-  > p,
-  a {
-    color: ${({ theme }) => theme.color};
-    letter-spacing: 1.2px;
+  strong {
+    color: ${({ theme }) => theme.colors.gray[300]};
+    font-size: 1.2rem;
+    text-transform: uppercase;
   }
 
-  svg {
-    color: red;
-    width: 12px;
-    height: 12px;
+  p {
+    color: ${({ theme }) => theme.colors.gray[200]};
+    font-size: 1rem;
+  }
+
+  span {
+    color: ${({ theme }) => theme.colors.gray[500]};
+    font-size: 1rem;
   }
 `;

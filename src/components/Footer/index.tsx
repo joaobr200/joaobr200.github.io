@@ -1,26 +1,19 @@
-import React from "react";
-
 import NetWork from "../Network";
-import { FiHeart } from "react-icons/fi";
-import { Footer as Rodape, Wrapper, MadeWithLove } from "./styles";
+import LogoSVG from "../../assets/logo.svg";
+import * as S from "./styles";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <Rodape>
-      <Wrapper className="container">
-        <MadeWithLove>
-          <p>
-            Feito com <FiHeart />
-          </p>
-        </MadeWithLove>
-        <NetWork />
-      </Wrapper>
-      <hr />
-      <div className="container">
-        <p>&copy; {year} joaobr200.github.io</p>
-      </div>
-    </Rodape>
+    <S.Rodape>
+      <a href="/">
+        <img src={LogoSVG} alt="Logo" />
+      </a>
+      <strong>Never stop learning.</strong>
+      <NetWork />
+      <p>&copy; {year} joaobr200.github.io</p>
+      <span>Made with React</span>
+    </S.Rodape>
   );
 };
 

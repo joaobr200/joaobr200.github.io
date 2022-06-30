@@ -57,7 +57,6 @@ export const About = styled.div`
 
   div p {
     margin: 8px 0;
-    font-weight: 500;
     line-height: 1.2rem;
   }
 `;

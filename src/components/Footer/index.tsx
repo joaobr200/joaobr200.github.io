@@ -1,17 +1,17 @@
+import Logo from "../Logo";
 import NetWork from "../Network";
-import LogoSVG from "../../assets/logo.svg";
 import * as S from "./styles";
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <S.Rodape>
-      <a href="/">
-        <img src={LogoSVG} alt="Logo" />
+      <a href="/" className="logo">
+        <Logo />
       </a>
       <strong>Never stop learning.</strong>
       <NetWork />
-      <p>&copy; {year} joaobr200.github.io</p>
+      <a href="/">&copy; {year} joaojustodev.github.io</a>
       <span>Made with React</span>
     </S.Rodape>
   );

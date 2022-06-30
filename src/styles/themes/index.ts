@@ -19,7 +19,7 @@ export const dark = {
   background: "linear-gradient(270deg,#09090a,#121214);",
   color: "#fdfffe",
   colors: {
-    primary: "#0ea5e9",
+    primary: "#1c64f2",
     secundary: "#121214",
     gray,
     black: "#040608",
@@ -33,7 +33,7 @@ export const light = {
   background: "linear-gradient(270deg,#e5e7eb,#f1f1c6);",
   color: "#121214",
   colors: {
-    primary: "#0ea5e9",
+    primary: "#1c64f2",
     secundary: "#161e2e",
     gray,
     black: "#040608",

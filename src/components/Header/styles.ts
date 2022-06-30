@@ -22,27 +22,18 @@ export const NavBar = styled.nav`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @media screen and (min-width: 1024px) {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 
 export const Logo = styled.div`
-  a {
-    color: ${({ theme }) => theme.color};
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 500;
-  }
-
-  a img {
-    width: calc(100% - 40px);
-  }
-
-  a img.white {
-    filter: brightness(0) invert(1);
+  svg {
+    width: 75px;
+    height: 75px;
+    border-radius: 9999px;
   }
 
   cursor: pointer;
@@ -53,12 +44,12 @@ export const MenuList = styled.ul`
   gap: 16px;
 
   li a {
-    color: ${({ theme }) => theme.colors.gray[400]};
+    color: ${({ theme }) => theme.color};
     transition: color 200ms ease;
   }
 
   li a:hover {
-    color: ${({ theme }) => theme.colors.gray[200]};
+    color: ${({ theme }) => theme.colors.gray[600]};
   }
 
   @media screen and (min-width: 1024px) {

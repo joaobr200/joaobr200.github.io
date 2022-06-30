@@ -6,7 +6,7 @@ export const Stack = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   article {
     width: 100%;
@@ -35,6 +35,12 @@ export const Stack = styled.div`
 
   @media screen and (max-width: 946px) {
     overflow-x: scroll;
+  }
+
+  @media screen and (max-width: 640px) {
+    article:nth-child(1) {
+      margin-left: 188px;
+    }
   }
 `;
 

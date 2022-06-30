@@ -8,75 +8,57 @@ export const WelcomeWrapper = styled.div`
 
   > div {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin-right: 24px;
+    align-items: center;
+    flex-flow: column;
+    gap: 40px;
+    margin: 0 auto;
+    padding: 8px;
+    text-align: center;
   }
-
   div h1 {
     color: ${({ theme }) => theme.color};
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 2.8rem;
+    line-height: 3rem;
   }
-
-  h1::after {
-    content: "";
-    background: ${({ theme }) => theme.color};
-    width: 4px;
-    height: 55px;
-    display: inline-block;
-    margin-left: 8px;
-    animation: blink 0.2s linear infinite alternate;
-
-    @keyframes blink {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-  }
-
   p {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  > img {
+    display: none;
   }
 
-  img {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+ 
   }
 
-  @media screen and (max-width: 1024px) {
-    div h1 {
-      font-size: 3.4rem;
-    }
-  }
-
-  @media screen and (max-width: 784px) {
+  @media screen and (min-width: 1024px) {
     > div {
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-      gap: 40px;
-      text-align: center;
+      text-align: start;
+      align-items: flex-start;
+    }
+    div h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    img {
+      display: block;
+      width: 400px;
+      height: 400px;
       margin: 0 auto;
     }
-    div h1 {
-      font-size: 2.8rem;
-      line-height: 1.6rem;
-    }
+
+  }
+
+  @media screen and (min-width: 784px) {
     p {
-      font-size: 1.1rem;
-      line-height: 1.6rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
     }
-    > img {
-      display: none;
+
+    div h1 {
+      font-size: 3.6rem;
+      line-height: 3.2rem;
     }
   }
 `;

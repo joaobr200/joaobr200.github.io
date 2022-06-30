@@ -1,14 +1,17 @@
 import { forwardRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 import * as S from "./styles";
 import Network from "../Network";
 import { menuItems } from "../Header";
 
-const menu = {
+const menu: Variants = {
   hidden: { opacity: 0, height: 0 },
-  visible: { opacity: 1, height: "190px" },
-  exit: { opacity: 0, height: 0 },
+  visible: { opacity: 1, height: "200px" },
+  exit: {
+    opacity: 0,
+    height: 0,
+  },
 };
 
 const list = {
@@ -21,7 +24,7 @@ const list = {
       staggerChildren: 0.3,
     },
   },
-  exit: { opacity: 1, scale: 0 },
+  exit: { opacity: 1 },
 };
 
 const item = {
@@ -30,7 +33,7 @@ const item = {
     y: 0,
     opacity: 1,
   },
-  exit: { y: 20, opacity: 0 },
+  exit: { y: -10, opacity: 0, height: 0 },
 };
 
 interface DropDownMenuProps {

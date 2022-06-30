@@ -55,5 +55,11 @@ export const AboutWrapper = styled.div`
       align-items: center;
       gap: 0.5rem;
     }
+
+    @media screen and (max-width: 768px) {
+      a {
+        font-size: 1rem;
+      }
+    }
   }
 `;

@@ -10,6 +10,7 @@ export const Rodape = styled.footer`
   justify-content: center;
   gap: 32px;
 
+  text-align: center;
   background: ${({ theme }) => theme.colors.secundary};
   box-shadow: ${({ theme }) => theme.shadows.xl};
   transition: background 0.2s linear;
@@ -20,7 +21,13 @@ export const Rodape = styled.footer`
     text-transform: uppercase;
   }
 
-  p {
+  a.logo svg {
+    width: 100px;
+    height: 100px;
+    border-radius: 9999px;
+  }
+
+  a {
     color: ${({ theme }) => theme.colors.gray[200]};
     font-size: 1rem;
   }

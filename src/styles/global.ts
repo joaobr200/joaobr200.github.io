@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.color};
     font-family: "Roboto", sans-serif;
-    transition: background 0.2s linear;
+    transition: background cubic-bezier(0.215, 0.610, 0.355, 1) linear;
   }
 
   a,

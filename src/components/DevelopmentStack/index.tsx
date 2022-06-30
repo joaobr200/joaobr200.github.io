@@ -13,20 +13,12 @@ const DevelopmentStack: React.FC = () => {
       <h2 className="underline-black">Stack de desenvolvimento</h2>
       <Stack>
         <article>
-          <img src={HtmlSVG} alt="HTML" />
-          <h3>HTML</h3>
-        </article>
-        <article>
-          <img src={CssSVG} alt="CSS" />
-          <h3>CSS</h3>
+          <img src={TypescriptSVG} alt="Typescript" />
+          <h3>Typescript</h3>
         </article>
         <article>
           <img src={ReactSVG} alt="React" />
           <h3>React</h3>
-        </article>
-        <article>
-          <img src={TypescriptSVG} alt="Typescript" />
-          <h3>Typescript</h3>
         </article>
         <article>
           <img src={NodeSVG} alt="NodeJS" />

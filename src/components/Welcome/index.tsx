@@ -11,12 +11,12 @@ const Welcome: React.FC = () => {
       <WelcomeWrapper className="container">
         <div>
           <h1>
-            Seja bem vindo ao meu site
+            Seja bem vindo
             {/* <TypeWriter text="Seja bem vindo ao meu site" /> */}
           </h1>
           <p>
-            Olá me chamo João Vitor, sou desenvolvedor front-end web e mobile
-            apaixonado por esse incrível mundo da programação.
+            Me chamo João, sou desenvolvedor front-end jr. apaixonado por esse
+            incrível mundo da programação.
           </p>
           <a href="#about">
             <Button size="md" type="button">

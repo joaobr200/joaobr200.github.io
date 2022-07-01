@@ -1,40 +1,98 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 import { AboutSection, Container, AboutWrapper } from "./styles";
 import me from "../../assets/me.png";
-import { FaArrowAltCircleLeft, FaArrowRight } from "react-icons/fa";
+import { ArrowFatLineRight } from "phosphor-react";
 
-const About: React.FC = () => {
+const frameAboutVariants = {
+  hidden: {
+    opacity: 0,
+    x: -40,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 100,
+    },
+  },
+};
+
+const About = () => {
   return (
     <AboutSection id="about">
       <Container className="container">
-        <img src={me} alt="me" />
+        <motion.img
+          src={me}
+          alt="me"
+          variants={frameAboutVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-200px" }}
+        />
         <AboutWrapper>
-          <article>
-            <h2 className="underline-gray">Quem sou eu ?</h2>
-            <p>
+          <motion.article>
+            <motion.h2
+              variants={frameAboutVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                margin: "-180px",
+              }}
+              className="underline-gray"
+            >
+              Quem sou eu ?
+            </motion.h2>
+            <motion.p
+              variants={frameAboutVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                margin: "-180px",
+              }}
+            >
               Além da programação, sou técnico de manutenção de aeronaves
               apaixonado pela aviação, com a pandemia da COVID-19 o setor da
               aviação teve um impacto significativo devido às restrições de
-              viagem, bem como a queda na demanda entre os viajantes.
-            </p>
-            <p>
+              viagem, e então decidi entrar no mundo da programação.
+            </motion.p>
+            <motion.p
+              variants={frameAboutVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                margin: "-180px",
+              }}
+            >
               Sou da geração Z e ja vim ao mundo quando celulares e internet já
               faziam parte do cotidiano global. Desde pequeno ja programava
               mesmo sem saber o que era a programação, desenvolvendo scripts e
               plugins para alguns jogos. Estou sempre em busca de conhecimento e
-              aprendizado, conclui cursos especializados na área da programação
-              tendo conhecimento prático de HTML, CSS, Javascript e React
-            </p>
-            <a
+              aprendizado, concluindo cursos especializados na área da
+              programação, otendo conhecimento prático de HTML, CSS, Javascript
+              e React
+            </motion.p>
+            <motion.a
+              variants={frameAboutVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               href="https://www.linkedin.com/in/joaobr200/details/certifications/"
               target="_blank"
               rel="noreferrer"
             >
               Confira alguns dos meus certificados
-              <FaArrowRight />
-            </a>
-          </article>
+              <ArrowFatLineRight />
+            </motion.a>
+          </motion.article>
         </AboutWrapper>
       </Container>
     </AboutSection>

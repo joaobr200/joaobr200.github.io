@@ -62,7 +62,7 @@ const DropdownMenu = forwardRef<HTMLDivElement, DropDownMenuProps>(
             >
               {menuItems.map((i) => {
                 return (
-                  <motion.li variants={item}>
+                  <motion.li variants={item} key={i.name}>
                     <a href={i.href}>{i.name}</a>
                   </motion.li>
                 );

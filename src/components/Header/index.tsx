@@ -51,15 +51,15 @@ const Header = () => {
 
           <S.NetworkWrapper>
             <Network />
+            <S.MenuButton onClick={() => cycleMenuIsOpen()}>
+              {menuIsOpen ? <X size={32} /> : <List size={32} />}
+            </S.MenuButton>
             <div onClick={() => toogleTheme()}>
               {currentTheme ? <Sun size={22} /> : <Moon size={22} />}
             </div>
           </S.NetworkWrapper>
 
           <DropdownMenu open={menuIsOpen} ref={dropdownRef} />
-          <S.MenuButton onClick={() => cycleMenuIsOpen()}>
-            {menuIsOpen ? <X size={32} /> : <List size={32} />}
-          </S.MenuButton>
         </S.NavBar>
       </div>
     </S.Nav>

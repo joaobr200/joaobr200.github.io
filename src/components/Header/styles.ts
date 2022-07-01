@@ -58,15 +58,18 @@ export const MenuList = styled.ul`
 `;
 
 export const NetworkWrapper = styled.div`
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  > div:nth-child(1) {
+    display: none;
+  }
 
   @media screen and (min-width: 1024px) {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-
-    div {
-      cursor: pointer;
+    > div:nth-child(1) {
+      display: block;
+      align-items: center;
+      gap: 18px;
     }
   }
 `;

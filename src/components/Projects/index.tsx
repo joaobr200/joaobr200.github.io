@@ -106,6 +106,7 @@ const Projects = () => {
           <Swiper
             modules={[Pagination, Autoplay]}
             slidesPerView={1}
+            spaceBetween={50}
             grabCursor={true}
             autoplay={{ delay: 5000 }}
             loop={true}

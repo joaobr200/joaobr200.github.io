@@ -1,9 +1,14 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, useTheme } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
     box-sizing: border-box;
   }
+  
+  *::selection {
+      background: ${({ theme }) => theme.selection};
+      color: ${({ theme }) => theme.color}
+    }
 
   blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
     margin: 0;
@@ -18,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.color};
-    font-family: "Roboto", sans-serif;
+    font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     transition: background cubic-bezier(0.215, 0.610, 0.355, 1) linear;
   }
 
@@ -34,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .container {
     width: 100%;
-    max-width:1280px;
+    max-width:1127px;
     
     margin:0 auto;
     padding:8px;
@@ -50,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.6575rem;
       }
 
-  .underline-black::after {
+  .underline::after {
     content: "";
       width: 36px;
       height: 4px;

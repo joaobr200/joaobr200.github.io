@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 import { AboutSection, Container, AboutWrapper } from "./styles";
 import me from "../../assets/me.png";
 import { ArrowFatLineRight } from "phosphor-react";
 
-const frameAboutVariants = {
+const frameAboutVariants: Variants = {
   hidden: {
     opacity: 0,
     x: -40,
@@ -20,20 +20,29 @@ const frameAboutVariants = {
   },
 };
 
+const frameMoveArrow: Variants = {
+  hover: {
+    x: 10,
+    transition: {
+      type: "spring",
+    },
+  },
+};
+
 const About = () => {
   return (
     <AboutSection id="about">
-      <Container className="container">
-        <motion.img
-          src={me}
-          alt="me"
-          variants={frameAboutVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-200px" }}
-        />
-        <AboutWrapper>
-          <motion.article>
+      <div className="container">
+        <Container>
+          <motion.img
+            src={me}
+            alt="me"
+            variants={frameAboutVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-200px" }}
+          />
+          <AboutWrapper>
             <motion.h2
               variants={frameAboutVariants}
               initial="hidden"
@@ -77,24 +86,30 @@ const About = () => {
               programação, otendo conhecimento prático de HTML, CSS, Javascript
               e React
             </motion.p>
-            <motion.a
-              variants={frameAboutVariants}
+            <motion.div
               initial="hidden"
+              whileHover="hover"
               whileInView="visible"
               viewport={{
                 once: true,
                 margin: "-100px",
               }}
-              href="https://www.linkedin.com/in/joaobr200/details/certifications/"
-              target="_blank"
-              rel="noreferrer"
             >
-              Confira alguns dos meus certificados
-              <ArrowFatLineRight />
-            </motion.a>
-          </motion.article>
-        </AboutWrapper>
-      </Container>
+              <motion.a
+                variants={frameAboutVariants}
+                href="https://www.linkedin.com/in/joaobr200/details/certifications/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Confira alguns dos meus certificados
+                <motion.div variants={frameMoveArrow}>
+                  <ArrowFatLineRight />
+                </motion.div>
+              </motion.a>
+            </motion.div>
+          </AboutWrapper>
+        </Container>
+      </div>
     </AboutSection>
   );
 };

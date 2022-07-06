@@ -14,8 +14,7 @@ const buttonCSS = css`
   transition: all 0.2s ease;
 
   &:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
+    background: ${({ theme }) => theme.colors.primaryHover};
   }
 
   &:focus {

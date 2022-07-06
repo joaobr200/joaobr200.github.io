@@ -1,81 +1,82 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Project = styled(motion.section)`
-  width: 100%;
-  padding: 8px;
+interface ProjectWrapperProps {
+  currentTheme: string;
+}
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+export const ProjectsSection = styled(motion.section)`
+  min-height: 100vh;
 
   h1 {
-    font-size: 4.8rem;
-    padding-bottom: 100px;
-  }
-
-  h1::after {
-    content: "";
-    display: block;
-    width: 86px;
-    height: 6px;
-    background: #000;
-    margin: 0 auto;
-  }
-
-  p {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 `;
 
-export const ProjectWrapper = styled.div`
-  width: 100%;
+export const Container = styled.div`
+  .swiper-pagination-bullet {
+    background: ${({ theme }) => theme.colors.primary};
+  }
+`;
 
+export const ProjectWrapper = styled.article<ProjectWrapperProps>`
   display: flex;
-  flex-wrap: wrap;
-`;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: ${({ theme }) => theme.shadows.lg};
+  background-color: ${({ theme, currentTheme }) =>
+    currentTheme === "dark" ? theme.colors.secundary : ""};
 
-export const ProjectArticle = styled(motion.article)`
-  position: relative;
+  .not-image {
+    width: 100%;
+    min-height: 200px;
 
-  width: 250px;
-  height: 230px;
-  margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  border-radius: 8px;
-
-  background: ${({ theme }) => theme.colors.gray};
-  box-shadow: 0 0 5px 2.5 rgba(0, 0, 0, 0.8);
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    opacity: 0.9;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.color};
   }
 
-  div.body {
-    padding: 8px;
-    p {
-      font-size: 1.2rem;
-    }
-
-    p.project {
-      font-weight: 700;
-    }
-    p.description {
-      font-size: 1rem;
-    }
+  img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    background-color: red;
   }
 `;
 
-export const ProjectIcon = styled.div`
-  position: absolute;
-  top: 150px;
-  right: 0;
-`;
+export const ProjectContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
 
-export const Image = styled.img`
-  width: 250px;
-  height: 150px;
+  div:nth-child(1) {
+    strong {
+      font-size: 1.4rem;
+    }
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    gap: 1rem;
+
+    > a:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      color: #fff;
+      background: #000;
+      padding: 0.2rem;
+      border-radius: 0.4rem;
+    }
+  }
 `;

@@ -7,7 +7,7 @@ import { menuItems } from "../Header";
 
 const menu: Variants = {
   hidden: { opacity: 0, height: 0 },
-  visible: { opacity: 1, height: "200px" },
+  visible: { opacity: 1, height: "220px" },
   exit: {
     opacity: 0,
     height: 0,

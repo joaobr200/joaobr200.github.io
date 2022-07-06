@@ -1,21 +1,11 @@
-import React, { useContext } from "react";
-import Home from "./pages";
-import { ThemeProvider } from "styled-components";
-import {
-  ThemeSwitchContext,
-  ThemeSwitchContextProvider,
-} from "./contexts/ThemeSwitchContext";
-import { GlobalStyle } from "./styles/global";
-import { dark, light } from "./styles/themes/index";
+import Router from "./pages";
+import { ThemeSwitchContextProvider } from "./contexts/ThemeSwitchContext";
 
-const App: React.FC = () => {
-  const { currentTheme } = useContext(ThemeSwitchContext);
-
+const App = () => {
   return (
-    <ThemeProvider theme={currentTheme ? dark : light}>
-      <Home />
-      <GlobalStyle />
-    </ThemeProvider>
+    <ThemeSwitchContextProvider>
+      <Router />
+    </ThemeSwitchContextProvider>
   );
 };
 

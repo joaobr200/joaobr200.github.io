@@ -1,10 +1,14 @@
-import React from "react";
-import Button from "../Button";
-import TypeWriter from "../TypeWriter";
 import { motion } from "framer-motion";
 
-import { WelcomeWrapper } from "./styles";
+import {
+  WelcomeSection,
+  Container,
+  ScrollDownWrapper,
+  ImgWrapper,
+} from "./styles";
 import PortifolioSVG from "../../assets/portfolio.svg";
+import { IoIosArrowDown } from "react-icons/io";
+import { Suspense, useState } from "react";
 
 const frameDivWelcome = {
   hidden: { opacity: 1 },
@@ -17,7 +21,7 @@ const frameDivWelcome = {
   },
 };
 
-const frameDivItem = {
+const frameDivWelcomeItem = {
   hidden: { x: -40, opacity: 0 },
   visible: {
     x: 0,
@@ -25,53 +29,73 @@ const frameDivItem = {
   },
 };
 
-const frameImg = {
-  hidden: { x: 20, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-};
+const Welcome = () => {
+  const [currentW] = useState<number>(() => window.innerWidth);
 
-const Welcome: React.FC = () => {
+  const frameWelcomeImg = {
+    hidden: { x: currentW < 1024 ? -20 : 20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        bounce: 0.5,
+        delay: 1,
+      },
+    },
+  };
+
   return (
-    <section>
-      <WelcomeWrapper className="container">
+    <WelcomeSection>
+      <div className="container">
+        <Container>
+          <motion.div
+            variants={frameDivWelcome}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 variants={frameDivWelcomeItem}>
+              Olá, eu sou o João
+            </motion.h1>
+            <motion.span variants={frameDivWelcomeItem}>
+              Desenvolvedor Front-end Jr.
+            </motion.span>
+            <motion.p variants={frameDivWelcomeItem}>
+              Apaixonado pela progamação, através da prática e muito aprendizado
+              produzo minhas aplicações.
+            </motion.p>
+          </motion.div>
+          <Suspense>
+            <ImgWrapper>
+              <motion.img
+                variants={frameWelcomeImg}
+                initial="hidden"
+                animate="visible"
+                src={PortifolioSVG}
+                alt="Portifólo"
+              />
+            </ImgWrapper>
+          </Suspense>
+        </Container>
         <motion.div
-          variants={frameDivWelcome}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1 variants={frameDivItem}>
-            Seja bem vindo
-            {/* <TypeWriter text="Seja bem vindo ao meu site" /> */}
-          </motion.h1>
-          <motion.p variants={frameDivItem}>
-            Me chamo João, sou desenvolvedor front-end jr. apaixonado por esse
-            incrível mundo da programação.
-          </motion.p>
-          <motion.a href="#about" variants={frameDivItem}>
-            <Button size="md" type="button">
-              Saiba mais
-            </Button>
-          </motion.a>
-        </motion.div>
-        <motion.img
-          variants={frameImg}
+          variants={frameDivWelcomeItem}
           initial="hidden"
           animate="visible"
           transition={{
-            type: "spring",
-            stiffness: 100,
-            bounce: 0.5,
-            duration: 1,
             delay: 1,
           }}
-          src={PortifolioSVG}
-          alt="Portifólo"
-        />
-      </WelcomeWrapper>
-    </section>
+        >
+          <ScrollDownWrapper>
+            <div>
+              <IoIosArrowDown size={22} />
+              <IoIosArrowDown size={22} />
+            </div>
+            <span>Role para baixo</span>
+          </ScrollDownWrapper>
+        </motion.div>
+      </div>
+    </WelcomeSection>
   );
 };
 

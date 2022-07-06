@@ -1,64 +1,121 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const WelcomeWrapper = styled.div`
+export const WelcomeSection = styled.section`
+  min-height: 100vh;
+`;
+
+export const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 1rem;
+    padding: 8px;
+    text-align: center;
+
+    h1 {
+      color: ${({ theme }) => theme.color};
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 0.8rem;
+      color: ${({ theme }) => theme.color};
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 100px 0 0 0;
+    flex-direction: row;
+
+    > div {
+      text-align: start;
+      justify-content: space-between;
+      align-items: flex-start;
+      h1 {
+        font-size: 3rem;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+      p {
+        width: 400px;
+      }
+    }
+  }
+`;
+
+export const ScrollDownWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 2rem 0 0 0%;
 
   > div {
     display: flex;
     align-items: center;
-    flex-flow: column;
-    gap: 40px;
-    margin: 0 auto;
-    padding: 8px;
-    text-align: center;
-  }
-  div h1 {
-    color: ${({ theme }) => theme.color};
-    font-size: 2.8rem;
-    line-height: 3rem;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-  > img {
-    display: none;
+    justify-content: center;
+    flex-direction: column;
+
+    > svg {
+      animation: fade 2s infinite;
+      color: ${({ theme }) => theme.color};
+    }
+
+    > svg:nth-child(1) {
+      animation-delay: 1.6s;
+    }
+
+    > svg:nth-child(2) {
+      margin: -15px 0 0 0;
+      animation-delay: 1.8s;
+    }
   }
 
- 
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   @media screen and (min-width: 1024px) {
-    > div {
-      text-align: start;
-      align-items: flex-start;
-    }
-    div h1 {
-      font-size: 4rem;
-      line-height: 4rem;
-    }
+    justify-content: flex-start;
+    margin: 2.5rem 0 0 0;
+  }
+`;
 
-    img {
-      display: block;
-      width: 400px;
-      height: 400px;
-      margin: 0 auto;
-    }
+export const ImgWrapper = styled.div`
+  overflow: hidden;
 
+  > img {
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
   }
 
-  @media screen and (min-width: 784px) {
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-    }
-
-    div h1 {
-      font-size: 3.6rem;
-      line-height: 3.2rem;
+  @media screen and (min-width: 1024px) {
+    > img {
+      max-width: 250px;
+      width: 100%;
+      height: 250px;
     }
   }
 `;

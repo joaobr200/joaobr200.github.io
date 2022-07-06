@@ -54,7 +54,7 @@ const Header = () => {
             <S.MenuButton onClick={() => cycleMenuIsOpen()}>
               {menuIsOpen ? <X size={32} /> : <List size={32} />}
             </S.MenuButton>
-            <div onClick={() => toogleTheme()}>
+            <div onClick={() => toogleTheme()} style={{ cursor: "pointer" }}>
               {currentTheme ? <Sun size={22} /> : <Moon size={22} />}
             </div>
           </S.NetworkWrapper>

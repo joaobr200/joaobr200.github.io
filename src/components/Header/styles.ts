@@ -13,7 +13,7 @@ export const Nav = styled.header`
   padding: 8px;
 
   background: ${({ theme }) => theme.background};
-  box-shadow: ${({ theme }) => theme.shadows.xl};
+  box-shadow: ${({ theme }) => theme.shadows.md};
   transition: background 0.2s linear;
 `;
 

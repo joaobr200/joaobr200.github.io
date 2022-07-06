@@ -1,16 +1,19 @@
-import Layout from "../components/Layout";
-import Welcome from "../components/Welcome";
-import About from "../components/About";
-import DevelopmentStack from "../components/DevelopmentStack";
+import { useContext } from "react";
+import { ThemeProvider } from "styled-components";
+import { ThemeSwitchContext } from "../contexts/ThemeSwitchContext";
+import { GlobalStyle } from "../styles/global";
+import { dark, light } from "../styles/themes/index";
 
-const Home = () => {
+import Home from "./Home";
+
+const Router = () => {
+  const { currentTheme } = useContext(ThemeSwitchContext);
   return (
-    <Layout>
-      <Welcome />
-      <About />
-      <DevelopmentStack />
-    </Layout>
+    <ThemeProvider theme={currentTheme ? dark : light}>
+      <Home />
+      <GlobalStyle />
+    </ThemeProvider>
   );
 };
 
-export default Home;
+export default Router;

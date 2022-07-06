@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <S.Rodape>
-      <a href="/" className="logo">
+      <a href="/" className="logo" aria-label="Logo Joaojustodev" title="logo">
         <Logo />
       </a>
       <strong>Never stop learning.</strong>

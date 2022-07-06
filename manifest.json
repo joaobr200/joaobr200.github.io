@@ -1,14 +1,19 @@
 {
   "index.html": {
-    "file": "assets/index.1c1337ca.js",
+    "file": "assets/index.b7199f4f.js",
     "src": "index.html",
     "isEntry": true,
+    "css": [
+      "assets/index.01130307.css"
+    ],
     "assets": [
       "assets/portfolio.523b42b2.svg",
       "assets/me.3771edd0.png",
       "assets/react.e9699ef9.svg",
       "assets/typescript.a37cdf16.svg",
-      "assets/nodejs.017082bf.svg"
+      "assets/nodejs.017082bf.svg",
+      "assets/react-logo.a51d7951.gif",
+      "assets/stack-logo.50596fc5.gif"
     ]
   }
 }

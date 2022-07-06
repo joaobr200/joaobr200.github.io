@@ -118,8 +118,8 @@ const Projects = () => {
               padding: "1rem 0",
             }}
           >
-            {projects.map(({ name, description, url, img }) => (
-              <SwiperSlide>
+            {projects.map(({ name, description, url, img }, index) => (
+              <SwiperSlide key={index}>
                 <ProjectWrapper currentTheme={name}>
                   <Suspense>
                     {img ? (

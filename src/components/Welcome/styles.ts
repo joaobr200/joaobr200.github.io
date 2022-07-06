@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const WelcomeSection = styled.section`
@@ -102,17 +103,17 @@ export const ScrollDownWrapper = styled.div`
   }
 `;
 
-export const ImgWrapper = styled.div`
+export const ImgWrapper = styled(motion.div)`
   overflow: hidden;
 
-  > img {
+  > svg {
     margin: 0 auto;
     width: 180px;
     height: 180px;
   }
 
   @media screen and (min-width: 1024px) {
-    > img {
+    > svg {
       max-width: 250px;
       width: 100%;
       height: 250px;

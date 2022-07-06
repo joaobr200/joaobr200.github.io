@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ReactComponent from "*.svg";
 
 import {
   WelcomeSection,
@@ -6,7 +7,7 @@ import {
   ScrollDownWrapper,
   ImgWrapper,
 } from "./styles";
-import PortifolioSVG from "../../assets/portfolio.svg";
+import { ReactComponent as PortifolioSVG } from "../../assets/portfolio.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { Suspense, useState } from "react";
 
@@ -67,14 +68,12 @@ const Welcome = () => {
             </motion.p>
           </motion.div>
           <Suspense>
-            <ImgWrapper>
-              <motion.img
-                variants={frameWelcomeImg}
-                initial="hidden"
-                animate="visible"
-                src={PortifolioSVG}
-                alt="Portifólo"
-              />
+            <ImgWrapper
+              variants={frameWelcomeImg}
+              initial="hidden"
+              animate="visible"
+            >
+              <PortifolioSVG />
             </ImgWrapper>
           </Suspense>
         </Container>

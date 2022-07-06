@@ -40,7 +40,7 @@ const About = () => {
             variants={frameAboutVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-200px" }}
+            viewport={{ once: true, margin: "-100px" }}
           />
           <AboutWrapper>
             <motion.h2
@@ -49,7 +49,7 @@ const About = () => {
               whileInView="visible"
               viewport={{
                 once: true,
-                margin: "-180px",
+                margin: "-150px",
               }}
               className="underline-gray"
             >
@@ -61,7 +61,7 @@ const About = () => {
               whileInView="visible"
               viewport={{
                 once: true,
-                margin: "-180px",
+                margin: "-150px",
               }}
             >
               Além da programação, sou técnico de manutenção de aeronaves
@@ -75,7 +75,7 @@ const About = () => {
               whileInView="visible"
               viewport={{
                 once: true,
-                margin: "-180px",
+                margin: "-150px",
               }}
             >
               Sou da geração Z e ja vim ao mundo quando celulares e internet já

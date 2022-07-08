@@ -3,9 +3,7 @@
     "file": "assets/index.7f3009ea.js",
     "src": "index.html",
     "isEntry": true,
-    "css": [
-      "assets/index.01130307.css"
-    ],
+    "css": ["assets/index.01130307.css"],
     "assets": [
       "assets/me.c1c1284b.png",
       "assets/react.e9699ef9.svg",
@@ -14,5 +12,50 @@
       "assets/react-logo.a51d7951.gif",
       "assets/stack-logo.50596fc5.gif"
     ]
-  }
+  },
+  "short_name": "Portifólio do João Justo ",
+  "name": "Portifólio do Desenvolvedor Front-end João Vitor Justo Arantes",
+  "description": "Seja bem vindo ao meu portifólio, aqui você poderá ver alguns dos meus projetos, e também poderá fazer contato comigo através do meu link para meu linkedin.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons-168.png",
+      "type": "image/png",
+      "sizes": "168x168"
+    },
+    {
+      "src": "images/icons-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "images/icons-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/icons-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "images/icons-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "display": "standalone",
+  "orientation": "vertical",
+  "theme_color": "#1c64f2",
+  "background_color": "#09090a"
 }

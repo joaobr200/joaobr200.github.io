@@ -37,53 +37,53 @@ const projects = [
   {
     name: "Calculadora",
     description: "Uma simples calculadora feita com html, css e javascript.",
-    img: "projects/calculadora.avif",
+    img: "projects/calculadora.png",
     url: "https://github.com/joaojustodev/Calculadora",
   },
   {
     name: "App bíblia",
     description:
       "Aplicativo da biblia integrado com uma API para buscar livros e versiculos em versões especificas.",
-    img: "projects/appbiblia.avif",
+    img: "projects/appbiblia.png",
     url: "https://github.com/joaojustodev/AppBiblia",
   },
   {
     name: "Github Search",
     description:
       "Integrado com API do github consigo buscar por usuarios e organizaçoes dentro do github",
-    img: "projects/githubsearch.avif",
+    img: "projects/githubsearch.png",
     url: "https://github.com/joaojustodev/github-search",
   },
   {
     name: "Foodima",
     description: "Foodima é um site fictício de receitas culinárias.",
-    img: "projects/foodima.avif",
+    img: "projects/foodima.png",
     url: "https://github.com/joaojustodev/Foodima",
   },
   {
     name: "Weather Now",
     description: "Aplicativo para buscar o clima de sua cidade.",
-    img: "projects/weathernow.avif",
+    img: "projects/weathernow.png",
     url: "https://github.com/joaojustodev/WeatherNow",
   },
   {
     name: "Desafio Rocket Coffee",
     description: "Desafio Rocketseat - Landing page rocket coffee",
-    img: "projects/rocketcoffe.avif",
+    img: "projects/rocketcoffe.png",
     url: "https://github.com/joaojustodev/desafio-rocket-coffee",
   },
   {
     name: "Ignite Lab - Rocketseat",
     description:
       "Desafio Rocketseat - Criação de um plataforma de aulas online",
-    img: "projects/ignitelab.avif",
+    img: "projects/ignitelab.png",
     url: "https://github.com/joaojustodev/ignite-lab-joaobr200-challenger",
   },
   {
     name: "Ignite Lab Next - Rocketseat",
     description:
       "Desafio Rocketseat - Criação de um plataforma de aulas online com NextJS e Autenticação pelo github.",
-    img: "projects/ignitelabnext.avif",
+    img: "projects/ignitelabnext.png",
     url: "https://github.com/joaojustodev/ignite-lab-joaobr200-next",
   },
 ];

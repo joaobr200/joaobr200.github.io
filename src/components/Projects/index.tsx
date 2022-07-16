@@ -86,6 +86,12 @@ const projects = [
     img: "projects/ignitelabnext.png",
     url: "https://github.com/joaojustodev/ignite-lab-joaobr200-next",
   },
+  {
+    name: "Clone C6 Bank",
+    description: "Clone do site da C6 Bank com NextJS e Tailwind ",
+    img: "projects/clonec6bank.png",
+    url: "https://github.com/joaojustodev/clone-c6bank",
+  },
 ];
 
 const Projects = () => {

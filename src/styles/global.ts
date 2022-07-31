@@ -37,6 +37,11 @@ export const GlobalStyle = createGlobalStyle`
     outline:none;
   }
 
+  button {
+    border: none;
+    background: transparent;
+  }
+
   .container {
     width: 100%;
     max-width:1127px;

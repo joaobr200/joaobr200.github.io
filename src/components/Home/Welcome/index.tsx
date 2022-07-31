@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import {
@@ -58,23 +58,23 @@ const Welcome = () => {
             <motion.h1 variants={frameDivWelcomeItem}>
               Olá, eu sou o João
             </motion.h1>
-            <motion.span variants={frameDivWelcomeItem}>
+            <motion.h2 variants={frameDivWelcomeItem}>
               Desenvolvedor Front-end Jr.
-            </motion.span>
+            </motion.h2>
             <motion.p variants={frameDivWelcomeItem}>
               Apaixonado pela progamação, através da prática e muito aprendizado
               produzo minhas aplicações.
             </motion.p>
           </motion.div>
-          <Suspense>
-            <ImgWrapper
-              variants={frameWelcomeImg}
-              initial="hidden"
-              animate="visible"
-            >
-              <PortifolioSVG />
-            </ImgWrapper>
-          </Suspense>
+          <ImgWrapper
+            variants={frameWelcomeImg}
+            initial="hidden"
+            animate="visible"
+          >
+            <picture aria-label="Imagem principal do site, homem fazendo sinal de ok com a mão esquerda.">
+              <PortifolioSVG aria-hidden />
+            </picture>
+          </ImgWrapper>
         </Container>
         <motion.div
           variants={frameDivWelcomeItem}
@@ -86,8 +86,8 @@ const Welcome = () => {
         >
           <ScrollDownWrapper>
             <div>
-              <IoIosArrowDown size={22} />
-              <IoIosArrowDown size={22} />
+              <IoIosArrowDown aria-hidden size={22} />
+              <IoIosArrowDown aria-hidden size={22} />
             </div>
             <span>Role para baixo</span>
           </ScrollDownWrapper>

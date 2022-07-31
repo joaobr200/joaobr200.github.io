@@ -26,7 +26,7 @@ export const Container = styled.div`
       font-size: 2rem;
     }
 
-    span {
+    h2 {
       font-size: 0.8rem;
       color: ${({ theme }) => theme.color};
     }
@@ -59,8 +59,29 @@ export const Container = styled.div`
   }
 `;
 
+export const ImgWrapper = styled(motion.div)`
+  overflow: hidden;
+
+  picture {
+    margin: 0 auto;
+  }
+
+  svg {
+    width: 180px;
+    height: 180px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    svg {
+      max-width: 250px;
+      width: 100%;
+      height: 250px;
+    }
+  }
+`;
+
 export const ScrollDownWrapper = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -98,25 +119,8 @@ export const ScrollDownWrapper = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
+    display: flex;
     justify-content: flex-start;
     margin: 2.5rem 0 0 0;
-  }
-`;
-
-export const ImgWrapper = styled(motion.div)`
-  overflow: hidden;
-
-  > svg {
-    margin: 0 auto;
-    width: 180px;
-    height: 180px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    > svg {
-      max-width: 250px;
-      width: 100%;
-      height: 250px;
-    }
   }
 `;

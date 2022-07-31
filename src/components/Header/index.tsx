@@ -1,8 +1,8 @@
 import { useCycle } from "framer-motion";
 import { ThemeSwitchContext } from "../../contexts/ThemeSwitchContext";
-import Network from "../Network";
-import DropdownMenu from "../DropdownMenu";
-import Logo from "../Logo";
+import Network from "../Ui/Network";
+import DropdownMenu from "../Ui/DropdownMenu";
+import Logo from "../Ui/Logo";
 
 import * as S from "./styles";
 import { List, X } from "phosphor-react";

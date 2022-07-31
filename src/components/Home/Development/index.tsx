@@ -1,15 +1,15 @@
+import { motion } from "framer-motion";
 import {
   DevelopmentSection,
   DevelopmentStackWrapper,
   AboutStack,
 } from "./styles";
 
-import ReactSVG from "../../assets/react.svg";
-import TypescriptSVG from "../../assets/typescript.svg";
-import NodeSVG from "../../assets/nodejs.svg";
-import reactLogoGif from "../../assets/react-logo.gif";
-import stackLogoGif from "../../assets/stack-logo.gif";
-import { motion } from "framer-motion";
+import ReactSVG from "../../../assets/react.svg";
+import TypescriptSVG from "../../../assets/typescript.svg";
+import NodeSVG from "../../../assets/nodejs.svg";
+import reactLogoGif from "../../../assets/react-logo.gif";
+import stackLogoGif from "../../../assets/stack-logo.gif";
 
 const frameSectionDevlopment = {
   hidden: { opacity: 0 },

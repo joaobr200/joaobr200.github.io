@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
 import { useTheme } from "styled-components";
+import { FaGithub } from "react-icons/fa";
 import {
   ProjectsSection,
   Container,

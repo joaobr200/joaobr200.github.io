@@ -1,5 +1,5 @@
+import { Suspense, useState } from "react";
 import { motion } from "framer-motion";
-import ReactComponent from "*.svg";
 
 import {
   WelcomeSection,
@@ -7,9 +7,8 @@ import {
   ScrollDownWrapper,
   ImgWrapper,
 } from "./styles";
-import { ReactComponent as PortifolioSVG } from "../../assets/portfolio.svg";
+import { ReactComponent as PortifolioSVG } from "../../../assets/portfolio.svg";
 import { IoIosArrowDown } from "react-icons/io";
-import { Suspense, useState } from "react";
 
 const frameDivWelcome = {
   hidden: { opacity: 1 },

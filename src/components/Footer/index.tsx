@@ -1,5 +1,5 @@
-import Logo from "../Logo";
-import NetWork from "../Network";
+import Logo from "../Ui/Logo";
+import NetWork from "../Ui/Network";
 import * as S from "./styles";
 
 const Footer = () => {

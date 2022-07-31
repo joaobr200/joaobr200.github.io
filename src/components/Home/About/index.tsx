@@ -1,7 +1,7 @@
 import { motion, Variants } from "framer-motion";
 
-import me from "../../assets/me.png";
 import { AboutSection, Container, AboutWrapper } from "./styles";
+import me from "../../../assets/me.png";
 import { ArrowFatLineRight } from "phosphor-react";
 
 const frameAboutVariants: Variants = {

@@ -26,7 +26,7 @@ export const Container = styled.div`
       font-size: 2rem;
     }
 
-    span {
+    h3 {
       font-size: 0.8rem;
       color: ${({ theme }) => theme.color};
     }
@@ -55,6 +55,27 @@ export const Container = styled.div`
       p {
         width: 400px;
       }
+    }
+  }
+`;
+
+export const ImgWrapper = styled(motion.div)`
+  overflow: hidden;
+
+  figure {
+    margin: 0 auto;
+  }
+
+  svg {
+    width: 180px;
+    height: 180px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    svg {
+      max-width: 250px;
+      width: 100%;
+      height: 250px;
     }
   }
 `;
@@ -100,23 +121,5 @@ export const ScrollDownWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     justify-content: flex-start;
     margin: 2.5rem 0 0 0;
-  }
-`;
-
-export const ImgWrapper = styled(motion.div)`
-  overflow: hidden;
-
-  > svg {
-    margin: 0 auto;
-    width: 180px;
-    height: 180px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    > svg {
-      max-width: 250px;
-      width: 100%;
-      height: 250px;
-    }
   }
 `;

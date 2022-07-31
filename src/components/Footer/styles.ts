@@ -21,7 +21,7 @@ export const Rodape = styled.footer`
     text-transform: uppercase;
   }
 
-  a.logo svg {
+  svg {
     width: 100px;
     height: 100px;
     border-radius: 9999px;

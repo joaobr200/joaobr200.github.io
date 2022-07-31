@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import Network from "../Network";
+import { menuItems } from "../../Header";
 
 import * as S from "./styles";
-import Network from "../Network";
-import { menuItems } from "../Header";
 
 const menu: Variants = {
   hidden: { opacity: 0, height: 0 },

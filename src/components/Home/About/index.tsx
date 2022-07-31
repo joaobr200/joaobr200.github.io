@@ -1,7 +1,7 @@
 import { motion, Variants } from "framer-motion";
 
-import me from "../../assets/me.png";
 import { AboutSection, Container, AboutWrapper } from "./styles";
+import me from "../../../assets/me.png";
 import { ArrowFatLineRight } from "phosphor-react";
 
 const frameAboutVariants: Variants = {
@@ -34,14 +34,16 @@ const About = () => {
     <AboutSection id="about">
       <div className="container">
         <Container>
-          <motion.img
-            src={me}
-            alt="me"
-            variants={frameAboutVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-          />
+          <figure>
+            <motion.img
+              src={me}
+              alt="Minha foto sorrindo com a camisa do flamengo e fundo roxo"
+              variants={frameAboutVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            />
+          </figure>
           <AboutWrapper>
             <motion.h2
               variants={frameAboutVariants}
@@ -94,19 +96,7 @@ const About = () => {
                 once: true,
                 margin: "-100px",
               }}
-            >
-              <motion.a
-                variants={frameAboutVariants}
-                href="https://www.linkedin.com/in/joaobr200/details/certifications/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Confira alguns dos meus certificados
-                <motion.div variants={frameMoveArrow}>
-                  <ArrowFatLineRight />
-                </motion.div>
-              </motion.a>
-            </motion.div>
+            ></motion.div>
           </AboutWrapper>
         </Container>
       </div>

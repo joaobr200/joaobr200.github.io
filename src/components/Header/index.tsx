@@ -1,15 +1,12 @@
-import { useContext, useEffect, useRef, useState } from "react";
 import { useCycle } from "framer-motion";
-
-import Network from "../Network";
-import LogoSVG from "../../assets/logo.svg";
+import { ThemeSwitchContext } from "../../contexts/ThemeSwitchContext";
+import Network from "../Ui/Network";
+import DropdownMenu from "../Ui/DropdownMenu";
+import Logo from "../Ui/Logo";
 
 import * as S from "./styles";
-import { List, Moon, Sun, X } from "phosphor-react";
-import DropdownMenu from "../DropdownMenu";
-import { ThemeSwitchContext } from "../../contexts/ThemeSwitchContext";
-import { Item } from "framer-motion/types/components/Reorder/Item";
-import Logo from "../Logo";
+import { List, X } from "phosphor-react";
+import ThemeSwitch from "../Ui/ThemeSwitch";
 
 export const menuItems = [
   {
@@ -28,16 +25,18 @@ export const menuItems = [
 
 const Header = () => {
   const [menuIsOpen, cycleMenuIsOpen] = useCycle(false, true);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const { toogleTheme, currentTheme } = useContext(ThemeSwitchContext);
 
   return (
     <S.Nav>
       <div className="container">
         <S.NavBar>
           <S.Logo>
-            <a href="/">
-              <Logo />
+            <a
+              href="/"
+              aria-label="Portifólio do João Justo - Desenvolvedor Front-end"
+              tabIndex={1}
+            >
+              <Logo aria-hidden />
             </a>
           </S.Logo>
 
@@ -51,15 +50,18 @@ const Header = () => {
 
           <S.NetworkWrapper>
             <Network />
-            <S.MenuButton onClick={() => cycleMenuIsOpen()}>
+            <S.MenuButton
+              type="button"
+              title="Abrir menu"
+              aria-expanded={menuIsOpen}
+              onClick={() => cycleMenuIsOpen()}
+            >
               {menuIsOpen ? <X size={32} /> : <List size={32} />}
             </S.MenuButton>
-            <div onClick={() => toogleTheme()} style={{ cursor: "pointer" }}>
-              {currentTheme ? <Sun size={22} /> : <Moon size={22} />}
-            </div>
+            <ThemeSwitch />
           </S.NetworkWrapper>
 
-          <DropdownMenu open={menuIsOpen} ref={dropdownRef} />
+          <DropdownMenu open={menuIsOpen} />
         </S.NavBar>
       </div>
     </S.Nav>

@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
 import { useTheme } from "styled-components";
+import { FaGithub } from "react-icons/fa";
 import {
   ProjectsSection,
   Container,
@@ -114,8 +114,6 @@ const Projects = () => {
             slidesPerView={1}
             spaceBetween={50}
             grabCursor={true}
-            autoplay={{ delay: 5000 }}
-            loop={true}
             pagination={{
               dynamicBullets: true,
               clickable: true,
@@ -129,7 +127,9 @@ const Projects = () => {
                 <ProjectWrapper currentTheme={name}>
                   <Suspense>
                     {img ? (
-                      <img src={img} alt={name} />
+                      <figure>
+                        <img src={img} alt={name} />
+                      </figure>
                     ) : (
                       <div className="not-image">
                         <span>{name}</span>
@@ -144,7 +144,7 @@ const Projects = () => {
                     <div>
                       <a href={url} target="blank" rel="noreferrer">
                         {" "}
-                        <FaGithub size={18} /> Abrir no github
+                        <FaGithub aria-hidden size={18} /> Abrir no github
                       </a>
                     </div>
                   </ProjectContent>

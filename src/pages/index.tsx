@@ -9,7 +9,7 @@ import Home from "./Home";
 const Router = () => {
   const { currentTheme } = useContext(ThemeSwitchContext);
   return (
-    <ThemeProvider theme={currentTheme ? dark : light}>
+    <ThemeProvider theme={currentTheme === "dark" ? dark : light}>
       <Home />
       <GlobalStyle />
     </ThemeProvider>

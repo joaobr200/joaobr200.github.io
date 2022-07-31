@@ -74,8 +74,9 @@ export const NetworkWrapper = styled.div`
   }
 `;
 
-export const MenuButton = styled.div`
+export const MenuButton = styled.button`
   cursor: pointer;
+  color: ${({ theme }) => theme.color};
   @media screen and (min-width: 1024px) {
     display: none;
   }

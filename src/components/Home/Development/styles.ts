@@ -8,7 +8,7 @@ export const DevelopmentSection = styled(motion.section)`
   }
 `;
 
-export const DevelopmentStackWrapper = styled(motion.div)`
+export const DevelopmentStackWrapper = styled(motion.ul)`
   width: 100%;
   margin: 15px 0;
 
@@ -16,7 +16,14 @@ export const DevelopmentStackWrapper = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
-  div {
+  overflow-x: scroll;
+
+  div:nth-child(1) {
+    display: flex;
+    margin-left: calc(7.5rem + 120px);
+  }
+
+  li {
     width: 100%;
     margin: 30px 45px 30px 8px;
     max-width: 140px;
@@ -29,26 +36,26 @@ export const DevelopmentStackWrapper = styled(motion.div)`
     text-align: center;
   }
 
-  div img {
+  li img {
     width: 120px;
     height: 120px;
     margin: 0 0 0.5rem 0;
   }
 
-  div span {
+  li figcaption {
     color: ${({ theme }) => theme.color};
     font-size: 0.8rem;
     font-weight: 500;
   }
 
-  @media screen and (max-width: 946px) {
-    overflow-x: scroll;
+  @media screen and (min-width: 420px) {
+    div:nth-child(1) {
+      margin-left: 0;
+    }
   }
 
-  @media screen and (max-width: 640px) {
-    div:nth-child(1) {
-      margin-left: 188px;
-    }
+  @media screen and (min-width: 640px) {
+    overflow-x: hidden;
   }
 `;
 
@@ -85,7 +92,7 @@ export const AboutStack = styled(motion.div)`
 
   article div:nth-child(2) {
     width: 400px;
-    h2 {
+    h3 {
       font-size: 1rem;
       font-weight: 700;
       color: ${({ theme }) => theme.colors.gray[300]};

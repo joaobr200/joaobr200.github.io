@@ -1,15 +1,15 @@
+import { motion } from "framer-motion";
 import {
   DevelopmentSection,
   DevelopmentStackWrapper,
   AboutStack,
 } from "./styles";
 
-import ReactSVG from "../../assets/react.svg";
-import TypescriptSVG from "../../assets/typescript.svg";
-import NodeSVG from "../../assets/nodejs.svg";
-import reactLogoGif from "../../assets/react-logo.gif";
-import stackLogoGif from "../../assets/stack-logo.gif";
-import { motion } from "framer-motion";
+import ReactSVG from "../../../assets/react.svg";
+import TypescriptSVG from "../../../assets/typescript.svg";
+import NodeSVG from "../../../assets/nodejs.svg";
+import reactLogoGif from "../../../assets/react-logo.gif";
+import stackLogoGif from "../../../assets/stack-logo.gif";
 
 const frameSectionDevlopment = {
   hidden: { opacity: 0 },
@@ -49,6 +49,21 @@ const frameAboutDevlopmentItem = {
   },
 };
 
+const stackItems = [
+  {
+    src: TypescriptSVG,
+    name: "Typescript",
+  },
+  {
+    src: ReactSVG,
+    name: "React",
+  },
+  {
+    src: NodeSVG,
+    name: "NodeJS",
+  },
+];
+
 const DevelopmentStack = () => {
   return (
     <DevelopmentSection
@@ -64,16 +79,14 @@ const DevelopmentStack = () => {
         </motion.h2>
         <DevelopmentStackWrapper variants={frameSectionDevlopmentItem}>
           <div>
-            <img src={TypescriptSVG} alt="Typescript" />
-            <span>Typescript</span>
-          </div>
-          <div>
-            <img src={ReactSVG} alt="React" />
-            <span>React</span>
-          </div>
-          <div>
-            <img src={NodeSVG} alt="NodeJS" />
-            <span>NodeJS</span>
+            {stackItems.map((item) => (
+              <li key={item.name}>
+                <figure>
+                  <img src={item.src} alt={item.name} />
+                  <figcaption>{item.name}</figcaption>
+                </figure>
+              </li>
+            ))}
           </div>
         </DevelopmentStackWrapper>
         <AboutStack
@@ -87,7 +100,7 @@ const DevelopmentStack = () => {
               <img src={stackLogoGif} alt="Stack Logo" />
             </div>
             <div>
-              <h2 className="underline-black">Por quê essa stack ?</h2>
+              <h3 className="underline-black">Por quê essa stack ?</h3>
               <p>
                 Como minha linguagem de desenvolvimento é o javascript, com essa
                 stack consigo usa-lá tanto no front-end como no back-end,
@@ -100,7 +113,7 @@ const DevelopmentStack = () => {
               <img src={reactLogoGif} alt="React Logo" />
             </div>
             <div>
-              <h2 className="underline-black">Por quê ReactJS ?</h2>
+              <h3 className="underline-black">Por quê ReactJS ?</h3>
               <p>
                 Simples, pela facilidade e rapidez de poder criar interfaces e
                 aplicações web e com o mesmo código criar também aplicações

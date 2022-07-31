@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import ReactComponent from "*.svg";
 
 import {
   WelcomeSection,
@@ -7,9 +7,8 @@ import {
   ScrollDownWrapper,
   ImgWrapper,
 } from "./styles";
-import { ReactComponent as PortifolioSVG } from "../../assets/portfolio.svg";
+import { ReactComponent as PortifolioSVG } from "../../../assets/portfolio.svg";
 import { IoIosArrowDown } from "react-icons/io";
-import { Suspense, useState } from "react";
 
 const frameDivWelcome = {
   hidden: { opacity: 1 },
@@ -59,23 +58,23 @@ const Welcome = () => {
             <motion.h1 variants={frameDivWelcomeItem}>
               Olá, eu sou o João
             </motion.h1>
-            <motion.span variants={frameDivWelcomeItem}>
+            <motion.h3 variants={frameDivWelcomeItem}>
               Desenvolvedor Front-end Jr.
-            </motion.span>
+            </motion.h3>
             <motion.p variants={frameDivWelcomeItem}>
               Apaixonado pela progamação, através da prática e muito aprendizado
               produzo minhas aplicações.
             </motion.p>
           </motion.div>
-          <Suspense>
-            <ImgWrapper
-              variants={frameWelcomeImg}
-              initial="hidden"
-              animate="visible"
-            >
-              <PortifolioSVG />
-            </ImgWrapper>
-          </Suspense>
+          <ImgWrapper
+            variants={frameWelcomeImg}
+            initial="hidden"
+            animate="visible"
+          >
+            <figure aria-label="Imagem principal do site, homem fazendo sinal de ok com a mão esquerda.">
+              <PortifolioSVG aria-hidden />
+            </figure>
+          </ImgWrapper>
         </Container>
         <motion.div
           variants={frameDivWelcomeItem}
@@ -87,8 +86,8 @@ const Welcome = () => {
         >
           <ScrollDownWrapper>
             <div>
-              <IoIosArrowDown size={22} />
-              <IoIosArrowDown size={22} />
+              <IoIosArrowDown aria-hidden size={22} />
+              <IoIosArrowDown aria-hidden size={22} />
             </div>
             <span>Role para baixo</span>
           </ScrollDownWrapper>

@@ -58,9 +58,9 @@ const Welcome = () => {
             <motion.h1 variants={frameDivWelcomeItem}>
               Olá, eu sou o João
             </motion.h1>
-            <motion.h2 variants={frameDivWelcomeItem}>
+            <motion.h3 variants={frameDivWelcomeItem}>
               Desenvolvedor Front-end Jr.
-            </motion.h2>
+            </motion.h3>
             <motion.p variants={frameDivWelcomeItem}>
               Apaixonado pela progamação, através da prática e muito aprendizado
               produzo minhas aplicações.

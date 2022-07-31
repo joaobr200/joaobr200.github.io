@@ -14,12 +14,17 @@ export const Container = styled.div`
   flex-direction: column;
   margin: auto 0;
 
-  img {
+  picture {
     width: 100%;
     height: 100%;
     max-width: 400px;
     max-height: 400px;
     margin-right: 8px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
   }
 
@@ -52,5 +57,9 @@ export const AboutWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
   }
 `;

@@ -82,8 +82,8 @@ const DevelopmentStack = () => {
             <li key={item.name}>
               <figure>
                 <img src={item.src} alt={item.name} />
+                <figcaption>{item.name}</figcaption>
               </figure>
-              <p>{item.name}</p>
             </li>
           ))}
         </DevelopmentStackWrapper>

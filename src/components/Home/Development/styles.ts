@@ -35,7 +35,7 @@ export const DevelopmentStackWrapper = styled(motion.ul)`
     margin: 0 0 0.5rem 0;
   }
 
-  li p {
+  li figcaption {
     color: ${({ theme }) => theme.color};
     font-size: 0.8rem;
     font-weight: 500;

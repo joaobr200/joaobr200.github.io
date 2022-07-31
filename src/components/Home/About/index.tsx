@@ -34,7 +34,7 @@ const About = () => {
     <AboutSection id="about">
       <div className="container">
         <Container>
-          <picture>
+          <figure>
             <motion.img
               src={me}
               alt="Minha foto sorrindo com a camisa do flamengo e fundo roxo"
@@ -43,7 +43,7 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
             />
-          </picture>
+          </figure>
           <AboutWrapper>
             <motion.h2
               variants={frameAboutVariants}

@@ -71,9 +71,9 @@ const Welcome = () => {
             initial="hidden"
             animate="visible"
           >
-            <picture aria-label="Imagem principal do site, homem fazendo sinal de ok com a mão esquerda.">
+            <figure aria-label="Imagem principal do site, homem fazendo sinal de ok com a mão esquerda.">
               <PortifolioSVG aria-hidden />
-            </picture>
+            </figure>
           </ImgWrapper>
         </Container>
         <motion.div

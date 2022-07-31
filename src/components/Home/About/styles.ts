@@ -14,17 +14,15 @@ export const Container = styled.div`
   flex-direction: column;
   margin: auto 0;
 
-  picture {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    max-height: 400px;
+  figure {
     margin-right: 8px;
   }
 
   img {
     width: 100%;
     height: 100%;
+    max-width: 400px;
+    max-height: 400px;
     border-radius: 50%;
   }
 

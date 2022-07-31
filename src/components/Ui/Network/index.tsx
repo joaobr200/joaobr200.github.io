@@ -14,15 +14,15 @@ const Network: React.FC = () => {
         rel="noreferrer"
         aria-label="Link para o meu Github"
       >
-        <FaGithub color={color} aria-label="Ícone Github" />
+        <FaGithub color={color} aria-hidden />
       </a>
       <a
         href="https://www.linkedin.com/in/jo%C3%A3o-vitor-justo-arantes-867628161/"
         target="_blank"
         rel="noreferrer"
-        aria-label="Link para o meu Linkdin"
+        aria-label="Link para o meu Linkedin"
       >
-        <FaLinkedin color="#0e76a8" aria-label="Ícone Linkedin" />
+        <FaLinkedin color="#0e76a8" aria-hidden />
       </a>
     </Container>
   );

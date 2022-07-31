@@ -78,14 +78,16 @@ const DevelopmentStack = () => {
           Stack de Desenvolvimento
         </motion.h2>
         <DevelopmentStackWrapper variants={frameSectionDevlopmentItem}>
-          {stackItems.map((item) => (
-            <li key={item.name}>
-              <figure>
-                <img src={item.src} alt={item.name} />
-                <figcaption>{item.name}</figcaption>
-              </figure>
-            </li>
-          ))}
+          <div>
+            {stackItems.map((item) => (
+              <li key={item.name}>
+                <figure>
+                  <img src={item.src} alt={item.name} />
+                  <figcaption>{item.name}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </div>
         </DevelopmentStackWrapper>
         <AboutStack
           variants={frameAboutDevlopment}

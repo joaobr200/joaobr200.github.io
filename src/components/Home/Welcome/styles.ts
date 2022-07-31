@@ -81,7 +81,7 @@ export const ImgWrapper = styled(motion.div)`
 `;
 
 export const ScrollDownWrapper = styled.div`
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -119,7 +119,6 @@ export const ScrollDownWrapper = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    display: flex;
     justify-content: flex-start;
     margin: 2.5rem 0 0 0;
   }

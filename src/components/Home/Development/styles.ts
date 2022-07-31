@@ -16,6 +16,13 @@ export const DevelopmentStackWrapper = styled(motion.ul)`
   align-items: center;
   justify-content: center;
 
+  overflow-x: scroll;
+
+  div:nth-child(1) {
+    display: flex;
+    margin-left: calc(7.5rem + 120px);
+  }
+
   li {
     width: 100%;
     margin: 30px 45px 30px 8px;
@@ -41,14 +48,14 @@ export const DevelopmentStackWrapper = styled(motion.ul)`
     font-weight: 500;
   }
 
-  @media screen and (max-width: 946px) {
-    overflow-x: scroll;
+  @media screen and (min-width: 420px) {
+    div:nth-child(1) {
+      margin-left: 0;
+    }
   }
 
-  @media screen and (max-width: 640px) {
-    div:nth-child(1) {
-      margin-left: 188px;
-    }
+  @media screen and (min-width: 640px) {
+    overflow-x: hidden;
   }
 `;
 

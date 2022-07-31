@@ -8,7 +8,7 @@ export const DevelopmentSection = styled(motion.section)`
   }
 `;
 
-export const DevelopmentStackWrapper = styled(motion.div)`
+export const DevelopmentStackWrapper = styled(motion.ul)`
   width: 100%;
   margin: 15px 0;
 
@@ -16,7 +16,7 @@ export const DevelopmentStackWrapper = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
-  div {
+  li {
     width: 100%;
     margin: 30px 45px 30px 8px;
     max-width: 140px;
@@ -29,13 +29,13 @@ export const DevelopmentStackWrapper = styled(motion.div)`
     text-align: center;
   }
 
-  div img {
+  li img {
     width: 120px;
     height: 120px;
     margin: 0 0 0.5rem 0;
   }
 
-  div span {
+  li p {
     color: ${({ theme }) => theme.color};
     font-size: 0.8rem;
     font-weight: 500;
@@ -85,7 +85,7 @@ export const AboutStack = styled(motion.div)`
 
   article div:nth-child(2) {
     width: 400px;
-    h2 {
+    h3 {
       font-size: 1rem;
       font-weight: 700;
       color: ${({ theme }) => theme.colors.gray[300]};

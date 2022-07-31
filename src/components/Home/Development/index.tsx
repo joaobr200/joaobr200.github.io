@@ -49,6 +49,21 @@ const frameAboutDevlopmentItem = {
   },
 };
 
+const stackItems = [
+  {
+    src: TypescriptSVG,
+    name: "Typescript",
+  },
+  {
+    src: ReactSVG,
+    name: "React",
+  },
+  {
+    src: NodeSVG,
+    name: "NodeJS",
+  },
+];
+
 const DevelopmentStack = () => {
   return (
     <DevelopmentSection
@@ -63,18 +78,14 @@ const DevelopmentStack = () => {
           Stack de Desenvolvimento
         </motion.h2>
         <DevelopmentStackWrapper variants={frameSectionDevlopmentItem}>
-          <div>
-            <img src={TypescriptSVG} alt="Typescript" />
-            <span>Typescript</span>
-          </div>
-          <div>
-            <img src={ReactSVG} alt="React" />
-            <span>React</span>
-          </div>
-          <div>
-            <img src={NodeSVG} alt="NodeJS" />
-            <span>NodeJS</span>
-          </div>
+          {stackItems.map((item) => (
+            <li key={item.name}>
+              <figure>
+                <img src={item.src} alt={item.name} />
+              </figure>
+              <p>{item.name}</p>
+            </li>
+          ))}
         </DevelopmentStackWrapper>
         <AboutStack
           variants={frameAboutDevlopment}
@@ -87,7 +98,7 @@ const DevelopmentStack = () => {
               <img src={stackLogoGif} alt="Stack Logo" />
             </div>
             <div>
-              <h2 className="underline-black">Por quê essa stack ?</h2>
+              <h3 className="underline-black">Por quê essa stack ?</h3>
               <p>
                 Como minha linguagem de desenvolvimento é o javascript, com essa
                 stack consigo usa-lá tanto no front-end como no back-end,
@@ -100,7 +111,7 @@ const DevelopmentStack = () => {
               <img src={reactLogoGif} alt="React Logo" />
             </div>
             <div>
-              <h2 className="underline-black">Por quê ReactJS ?</h2>
+              <h3 className="underline-black">Por quê ReactJS ?</h3>
               <p>
                 Simples, pela facilidade e rapidez de poder criar interfaces e
                 aplicações web e com o mesmo código criar também aplicações

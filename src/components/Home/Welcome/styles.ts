@@ -62,7 +62,7 @@ export const Container = styled.div`
 export const ImgWrapper = styled(motion.div)`
   overflow: hidden;
 
-  picture {
+  figure {
     margin: 0 auto;
   }
 

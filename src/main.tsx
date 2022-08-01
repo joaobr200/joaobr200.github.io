@@ -1,10 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import App from "./App";
 import "swiper/css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const app = document.getElementById("root");
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  app
 );

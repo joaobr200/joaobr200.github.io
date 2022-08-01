@@ -43,7 +43,11 @@ export const ProjectWrapper = styled.article<ProjectWrapperProps>`
     color: ${({ theme }) => theme.color};
   }
 
-  img {
+  > figure {
+    width: 100%;
+  }
+
+  > figure img {
     width: 100%;
     max-height: 200px;
     object-fit: cover;

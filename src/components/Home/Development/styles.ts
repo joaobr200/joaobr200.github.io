@@ -3,59 +3,61 @@ import styled from "styled-components";
 
 export const DevelopmentSection = styled(motion.section)`
   min-height: 100vh;
+  overflow: hidden;
   @media screen and (min-width: 1024px) {
     margin: 100px 0 0 0;
   }
 `;
 
-export const DevelopmentStackWrapper = styled(motion.ul)`
+export const DevelopmentStackItems = styled.ul`
   width: 100%;
   margin: 15px 0;
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  overflow-x: scroll;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
 
-  div:nth-child(1) {
-    display: flex;
-    margin-left: calc(7.5rem + 120px);
+  animation-name: loop;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+
+  @keyframes loop {
+    0% {
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(calc(-100vw - 104px));
+      -webkit-transform: translateX(calc(-100vw - 104px));
+    }
   }
 
-  li {
-    width: 100%;
-    margin: 30px 45px 30px 8px;
-    max-width: 140px;
-
+  > li figure {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    text-align: center;
   }
 
-  li img {
+  > li figure figcaption {
+    color: ${({ theme }) => theme.color};
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  > li figure img {
     width: 120px;
     height: 120px;
     margin: 0 0 0.5rem 0;
   }
 
-  li figcaption {
-    color: ${({ theme }) => theme.color};
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  @media screen and (min-width: 420px) {
-    div:nth-child(1) {
-      margin-left: 0;
-    }
-  }
-
-  @media screen and (min-width: 640px) {
-    overflow-x: hidden;
+  > li + li {
+    margin-left: 6rem;
   }
 `;
 

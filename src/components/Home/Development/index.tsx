@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import {
   DevelopmentSection,
-  DevelopmentStackWrapper,
+  DevelopmentStackItems,
   AboutStack,
 } from "./styles";
 
-import ReactSVG from "../../../assets/react.svg";
+import HtmlSVG from "../../../assets/html.svg";
+import CssSVG from "../../../assets/css.svg";
+import JavascriptSVG from "../../../assets/javascript.svg";
+import SassSVG from "../../../assets/sass.svg";
 import TypescriptSVG from "../../../assets/typescript.svg";
+import ReactSVG from "../../../assets/react.svg";
 import NodeSVG from "../../../assets/nodejs.svg";
 import reactLogoGif from "../../../assets/react-logo.gif";
 import stackLogoGif from "../../../assets/stack-logo.gif";
@@ -51,6 +55,22 @@ const frameAboutDevlopmentItem = {
 
 const stackItems = [
   {
+    src: HtmlSVG,
+    name: "HTML",
+  },
+  {
+    src: CssSVG,
+    name: "CSS",
+  },
+  {
+    src: JavascriptSVG,
+    name: "Javascript",
+  },
+  {
+    src: SassSVG,
+    name: "SASS",
+  },
+  {
     src: TypescriptSVG,
     name: "Typescript",
   },
@@ -77,18 +97,31 @@ const DevelopmentStack = () => {
         <motion.h2 variants={frameSectionDevlopmentItem} className="underline">
           Stack de Desenvolvimento
         </motion.h2>
-        <DevelopmentStackWrapper variants={frameSectionDevlopmentItem}>
-          <div>
-            {stackItems.map((item) => (
-              <li key={item.name}>
-                <figure>
-                  <img src={item.src} alt={item.name} />
-                  <figcaption>{item.name}</figcaption>
-                </figure>
-              </li>
-            ))}
-          </div>
-        </DevelopmentStackWrapper>
+      </div>
+
+      <motion.div variants={frameSectionDevlopmentItem}>
+        <DevelopmentStackItems>
+          {stackItems.map((item) => (
+            <li key={item.name}>
+              <figure>
+                <img src={item.src} alt={item.name} />
+                <figcaption>{item.name}</figcaption>
+              </figure>
+            </li>
+          ))}
+
+          {stackItems.map((item) => (
+            <li key={item.name}>
+              <figure>
+                <img src={item.src} alt={item.name} />
+                <figcaption>{item.name}</figcaption>
+              </figure>
+            </li>
+          ))}
+        </DevelopmentStackItems>
+      </motion.div>
+
+      <div className="container">
         <AboutStack
           variants={frameAboutDevlopment}
           initial="hidden"

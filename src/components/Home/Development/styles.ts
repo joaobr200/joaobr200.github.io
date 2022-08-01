@@ -10,7 +10,7 @@ export const DevelopmentSection = styled(motion.section)`
 `;
 
 export const DevelopmentStackItems = styled.ul`
-  width: 100%;
+  width: calc((120px + 6rem) * 7); // IMAGE SIZE + MARGIN * IMAGES LENGHT
   margin: 15px 0;
 
   display: flex;
@@ -21,10 +21,11 @@ export const DevelopmentStackItems = styled.ul`
   will-change: transform;
 
   animation-name: loop;
-  animation-duration: 25s;
+  animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: backwards;
+  transform: translate3d(0, 0, 0);
 
   @keyframes loop {
     0% {
@@ -33,8 +34,8 @@ export const DevelopmentStackItems = styled.ul`
     }
 
     100% {
-      transform: translateX(calc(-100vw - 104px));
-      -webkit-transform: translateX(calc(-100vw - 104px));
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
     }
   }
 
